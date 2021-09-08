@@ -1,0 +1,5 @@
+<div>
+    <button (click)="goToExercises()">Back</button>
+    <button  *ngIf="notFirst()" (click)="goPrevious()">Previous</button>
+    <button  *ngIf="notLast()" (click)="goNext()">Next</button>
+</div>
