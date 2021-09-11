@@ -6,11 +6,11 @@
     <p>{{ exercise.function }}</p>
     <h4>Location:</h4>
     <p>{{ exercise.location }}</p>
-    <div><img [src]="exercise.image" alt=""></div>
+    <div><img [src]="exercise.image" alt="Diagram Of Muscle"></div>
     <h4>Exercise:</h4>
     <p class="videoText">{{ exercise.exercise }}</p>
-    <div class="video">
-        <iframe width="576" height="324" [src]="exercise.video | videoSanitizer"></iframe>
+    <div class="video" width="576" height="324" >
+        <iframe allowfullscreen [src]="exercise.video | videoSanitizer"></iframe>
     </div>
 </div>
 <app-details-page-controls></app-details-page-controls>

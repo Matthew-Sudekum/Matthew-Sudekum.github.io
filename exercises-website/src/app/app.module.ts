@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { VideoUrlPipe } from './video-url.pipe';
 import { DetailsPageControlsComponent } from './details-page-controls/details-page-controls.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailsPageControlsComponent } from './details-page-controls/details-pa
     PageNotFoundComponent,
     HomeComponent,
     VideoUrlPipe,
-    DetailsPageControlsComponent
+    DetailsPageControlsComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

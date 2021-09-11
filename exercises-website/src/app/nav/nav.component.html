@@ -1,0 +1,11 @@
+<div class="nav">
+    <div id="fullsize-nav" [ngClass]="returnNavToggle()">
+        <a routerLink="/home" routerLinkActive="active" (click)="toggleNav()">Home</a>
+        <a routerLink="/exercises" routerLinkActive="active" (click)="toggleNav()">Exercises</a>
+    </div>
+    <div id="hamburger-nav" (click)="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
