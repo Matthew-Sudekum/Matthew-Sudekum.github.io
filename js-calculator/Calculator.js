@@ -1,5 +1,6 @@
 function display(val){
-    if(document.getElementById('display').getElementsByTagName('p')[0].innerHTML == '0')
+    let display = document.getElementById('display').getElementsByTagName('p')[0].innerHTML;
+    if(display == '0' || display == 'Infinity')
         document.getElementById('display').getElementsByTagName('p')[0].innerHTML = val;
     else
         document.getElementById('display').getElementsByTagName('p')[0].innerHTML += val;

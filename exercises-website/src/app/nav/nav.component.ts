@@ -25,7 +25,6 @@ export class NavComponent implements OnInit {
 
   returnNavToggle() {
     if (this.toggleActive === true) {
-      console.log('yo');
       return 'active';
     }
     else {
