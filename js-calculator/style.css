@@ -2,11 +2,20 @@
     margin: 0;
     padding: 0;
 }
+#nav {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    font-size: 25px;
+}
 body {
     background-color: #009090;
 }
 #calc{
-    margin: 10vh auto;
+    margin: 5vh auto;
     border: solid 2px #055;
     background-color: #008080;
     display: flex;
@@ -37,6 +46,9 @@ input[type="button"]{
 .num input{
     background-color: #008d8d;
     border-color: #008d8d;
+}
+#calc > div > input:hover {
+    cursor: pointer;
 }
 
 @media (orientation: portrait){
