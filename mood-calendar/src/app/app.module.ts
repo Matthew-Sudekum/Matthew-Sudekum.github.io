@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { MoodComponent } from './mood/mood.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
-    MoodComponent
+    MoodComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

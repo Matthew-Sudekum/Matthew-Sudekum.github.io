@@ -1,0 +1,16 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: violet;
+    font-size: 25px;
+}
+a:visited {
+    color: violet;
+}
+a:hover {
+    color: rgb(255, 205, 255);
+}
