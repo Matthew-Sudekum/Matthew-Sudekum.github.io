@@ -10,13 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <div id="nav">
-    <p id="navAbout" class="activeNav" onclick="scrollToAbout()">About</p>
-    <p id="navWork" class="" onclick="scrollToWork()">Work</p>
-    <p id="navContact" class="" onclick="scrollToContact()">Contact</p>
-  </div>
+  <nav id="nav">
+    <a id="navAbout" class="activeNav" href="#about">About</a>
+    <a id="navWork" class="" href="#work">Work</a>
+    <a id="navContact" class="" href="#contact">Contact</a>
+  </nav>
   
-  <div id="about">
+  <section id="about">
     <div class="rectangle top-left-rect"></div>
     <img src="assets/word-art4.svg" alt="word art" id="word-art">
     <img src="assets/portrait.jpg" alt="portrait" id="portrait">
@@ -24,23 +24,23 @@
       <p>Passion driven programmer for 8 years, with 1 year in web development.</p>
     </div>
     <div class="rectangle bottom-right-rect"></div>
-  </div>
+  </section>
 
-  <div id="work">
+  <section id="work">
     <div class="rectangle top-right-rect"></div>
     <div id="projects">
-      <a href="htps://www.infinitelyindie.com/"></a>
-      <a href="mood-calendar/docs/index.html"></a>
-      <a href="exercises-website/docs/index.html"></a>
-      <a href="js-calculator/Calculator.html"></a>
+      <a href="https://www.infinitelyindie.com/" style="background-image: url(assets/inf-ind-site-img.png);"></a>
+      <a href="mood-calendar/docs/index.html" style="background-image: url(assets/exercise-site-img.png);"></a>
+      <a href="exercises-website/docs/index.html" style="background-image: url(assets/exercise-site-img.png);"></a>
+      <a href="js-calculator/Calculator.html" style="background-image: url(assets/exercise-site-img.png);"></a>
     </div>
     <div class="rectangle bottom-left-rect"></div>
-  </div>
+  </section>
 
-  <div id="contact">
+  <section id="contact">
     <div class="rectangle top-left-rect"></div>
     <div class="rectangle bottom-right-rect"></div>
-  </div>
-  <script src="scripts/scroll-detector.js"></script>
+  </section>
+  <script src="scripts/scroll-detection.js"></script>
 </body>
 </html>

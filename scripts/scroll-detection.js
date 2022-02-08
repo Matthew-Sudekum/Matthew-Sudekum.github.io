@@ -9,7 +9,9 @@ let contactSection = document.getElementById("contact");
 
 let lastScrollPos = window.scrollY;
 
-function getQuarterY(elem, multFactor){
+const links = document.querySelectorAll("#nav > a");
+
+function getQuarterY(elem, multFactor) {
     return elem.getBoundingClientRect().top + ((elem.clientHeight / 4) * multFactor);
 }
 
@@ -86,23 +88,18 @@ window.addEventListener("scroll", function(){
     }
 });
 
-function scrollToAbout() {
-    if(window.scrollY != aboutSection.getBoundingClientRect().top - navSection.getBoundingClientRect().bottom) {
-        window.scroll(0, aboutSection.getBoundingClientRect().top - navSection.getBoundingClientRect().bottom);
-    }
-    else { }
+for(const link of links) {
+    link.addEventListener("click", clickEventHandler);
 }
 
-function scrollToWork() {
-    if(window.scrollY != workSection.getBoundingClientRect().top - navSection.getBoundingClientRect().bottom) {
-        window.scroll(0, workSection.getBoundingClientRect().top - navSection.getBoundingClientRect().bottom);
-    }
-    else { }
+function clickEventHandler(event) {
+    event.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop - document.getElementById("nav").clientHeight;
+
+    scroll({
+        top: offsetTop,
+        behavior: "smooth"
+    });
 }
 
-function scrollToContact() {
-    if(window.scrollY != contactSection.getBoundingClientRect().top - navSection.getBoundingClientRect().bottom) {
-        window.scroll(0, contactSection.getBoundingClientRect().top - navSection.getBoundingClientRect().bottom);
-    }
-    else { }
-}
