@@ -10,18 +10,37 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <div class="nav">
-    <p class="activeNav">About</p>
-    <p>Work</p>
-    <p>Contact</p>
+  <div id="nav">
+    <p id="navAbout" class="activeNav" onclick="scrollToAbout()">About</p>
+    <p id="navWork" class="" onclick="scrollToWork()">Work</p>
+    <p id="navContact" class="" onclick="scrollToContact()">Contact</p>
   </div>
   
-  <div class="about">
+  <div id="about">
+    <div class="rectangle top-left-rect"></div>
+    <img src="assets/word-art4.svg" alt="word art" id="word-art">
+    <img src="assets/portrait.jpg" alt="portrait" id="portrait">
     <div id="desc">
-      <p>Passion driven programmer since 14 years old;</p>
+      <p>Passion driven programmer for 8 years, with 1 year in web development.</p>
     </div>
-    <img src="assets/portrait.jpg" alt="" id="portrait">
-    <img src="assets/word-art2.svg" alt="word art" id="word-art">
+    <div class="rectangle bottom-right-rect"></div>
   </div>
+
+  <div id="work">
+    <div class="rectangle top-right-rect"></div>
+    <div id="projects">
+      <a href="htps://www.infinitelyindie.com/"></a>
+      <a href="mood-calendar/docs/index.html"></a>
+      <a href="exercises-website/docs/index.html"></a>
+      <a href="js-calculator/Calculator.html"></a>
+    </div>
+    <div class="rectangle bottom-left-rect"></div>
+  </div>
+
+  <div id="contact">
+    <div class="rectangle top-left-rect"></div>
+    <div class="rectangle bottom-right-rect"></div>
+  </div>
+  <script src="scripts/scroll-detector.js"></script>
 </body>
 </html>
