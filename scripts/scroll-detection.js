@@ -3,7 +3,7 @@ let lastScrollPos = window.scrollY;
 const navBottom = document.getElementById("nav").getBoundingClientRect().bottom;
 const sections = document.querySelectorAll("section");
 
-const links = document.querySelectorAll("#nav > a");
+const links = document.querySelectorAll("#in-page-link");
 for(const link of links) {
     link.addEventListener("click", clickEventHandler);
 }
