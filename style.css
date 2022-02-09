@@ -34,28 +34,35 @@ body {
     font-size: 1.6rem;
 }
 
-
-#about {
-    margin-top: 6vh;
+section {
     position: relative;
     width: 100vw;
     height: 94vh;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
     overflow: hidden;
 }
 
-#desc {
+#home {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 6vh;
+}
+
+#desc-top {
     margin-bottom: 40vh;
+}
+#desc-bottom {
+    margin-top: 40vh;
+}
+.desc {
     width: 25%;
     height: 25vw;
     display: flex;
     align-items: center;
 }
-#desc p{
+.desc p{
     padding: 5px;
     width: 80%;
     font-size: 1.5rem;
@@ -73,7 +80,6 @@ body {
 }
 
 #word-art {
-    margin-top: 40vh;
     display: block;
     width: 25%;
     height: 25vw;
@@ -107,12 +113,6 @@ body {
 }
 
 #work {
-    position: relative;
-    width: 100vw;
-    height: 94vh;
-    display: flex;
-    overflow: hidden;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
@@ -207,10 +207,4 @@ body {
   }
 
 #contact {
-    position: relative;
-    width: 100vw;
-    height: 94vh;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
 }

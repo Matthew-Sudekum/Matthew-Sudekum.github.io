@@ -11,16 +11,19 @@
 </head>
 <body>
   <nav id="nav">
-    <a id="navAbout" class="activeNav" href="#about">About</a>
+    <a id="navHome" class="activeNav" href="#home">Home</a>
     <a id="navWork" class="" href="#work">Work</a>
+    <a id="navAbout" class="" href="#about">About</a>
     <a id="navContact" class="" href="#contact">Contact</a>
   </nav>
   
-  <section id="about">
+  <section id="home">
     <div class="rectangle top-left-rect"></div>
-    <img src="assets/word-art4.svg" alt="word art" id="word-art">
+    <div class="desc" id="desc-bottom">
+      <p>I've come a long way in a short time and plan to go much further. This site will be a showcase to what I've accomplished.</p>
+    </div>
     <img src="assets/portrait.jpg" alt="portrait" id="portrait">
-    <div id="desc">
+    <div class="desc" id="desc-top">
       <p>Passion driven programmer for 8 years, with 1 year in web development.</p>
     </div>
     <div class="rectangle bottom-right-rect"></div>
@@ -49,9 +52,14 @@
     <div class="rectangle bottom-left-rect"></div>
   </section>
 
-  <section id="contact">
+  <section id="about">
     <div class="rectangle top-left-rect"></div>
     <div class="rectangle bottom-right-rect"></div>
+  </section>
+
+  <section id="contact">
+    <div class="rectangle top-right-rect"></div>
+    <div class="rectangle bottom-left-rect"></div>
   </section>
   <script src="scripts/scroll-detection.js"></script>
 </body>

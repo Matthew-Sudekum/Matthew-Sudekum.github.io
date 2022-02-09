@@ -1,96 +1,69 @@
-let navSection = document.getElementById("nav");
-let navAbout = document.getElementById("navAbout");
-let navWork = document.getElementById("navWork");
-let navContact = document.getElementById("navContact");
-
-let aboutSection = document.getElementById("about");
-let workSection = document.getElementById("work");
-let contactSection = document.getElementById("contact");
-
+let currentSection = 0;
 let lastScrollPos = window.scrollY;
+const navBottom = document.getElementById("nav").getBoundingClientRect().bottom;
+const sections = document.querySelectorAll("section");
 
 const links = document.querySelectorAll("#nav > a");
+for(const link of links) {
+    link.addEventListener("click", clickEventHandler);
+}
 
 function getQuarterY(elem, multFactor) {
     return elem.getBoundingClientRect().top + ((elem.clientHeight / 4) * multFactor);
 }
 
-window.addEventListener("scroll", function(){
+function classCheckRemoveAdd(i) {
+    for(const link of links) {
+        if(link.classList[0] != null){
+            link.classList.remove("activeNav");
+        }
+    }
+    links[i].classList.add("activeNav");
+}
+
+window.addEventListener("scroll", function() {
     if(lastScrollPos < this.window.scrollY) {
-        if(aboutSection.getBoundingClientRect().top >= navSection.getBoundingClientRect().bottom
-         && workSection.getBoundingClientRect().top > navSection.getBoundingClientRect().bottom + getQuarterY(aboutSection, 3)) {
-            if(navAbout.classList[0] == "activeNav") { }
-            else if(navAbout.classList[0] == null) {
-                if(navWork.classList[0] != null) {
-                    navWork.classList.remove("activeNav");
+        for(let i = 0; i < sections.length; i++) {
+            if(i == 0){
+                if(getQuarterY(sections[0], 3) > navBottom) {
+                    classCheckRemoveAdd(i);
+                    currentSection = i;
                 }
-                if(navContact.classList[0] != null) {
-                    navContact.classList.remove("activeNav");
-                }
-                navAbout.classList.add("activeNav");
             }
-        }
-        if(getQuarterY(aboutSection, 3) <= navSection.getBoundingClientRect().bottom
-         && workSection.getBoundingClientRect().bottom > navSection.getBoundingClientRect().bottom + getQuarterY(aboutSection, 3)) {
-            if(navWork.classList[0] == "activeNav") { }
-            else if(navWork.classList[0] == null) {
-                if(navAbout.classList[0] != null) {
-                    navAbout.classList.remove("activeNav");
+            if(i != 0 && i != sections.length - 1) {
+                if(getQuarterY(sections[i - 1], 3) <= navBottom && getQuarterY(sections[i], 3) > navBottom) {
+                    classCheckRemoveAdd(i);
+                    currentSection = i;
                 }
-                if(navContact.classList[0] != null) {
-                    navContact.classList.remove("activeNav");
-                }
-                navWork.classList.add("activeNav");
             }
-        }
-        if(getQuarterY(workSection, 3) <= navSection.getBoundingClientRect().bottom
-         && contactSection.getBoundingClientRect().bottom > navSection.getBoundingClientRect().bottom + getQuarterY(workSection, 3)) {
-            if(navContact.classList[0] == "activeNav") { }
-            else if(navContact.classList[0] == null) {
-                if(navAbout.classList[0] != null) {
-                    navAbout.classList.remove("activeNav");
+            if(i == sections.length - 1) {
+                if(getQuarterY(sections[i - 1], 3) <= navBottom) {
+                    classCheckRemoveAdd(i);
+                    currentSection = i;
                 }
-                if(navWork.classList[0] != null) {
-                    navWork.classList.remove("activeNav");
-                }
-                navContact.classList.add("activeNav");
             }
+            else { }
         }
         lastScrollPos = this.window.scrollY;
     }
-    if(lastScrollPos > this.window.scrollY) {
-        if(getQuarterY(workSection, 1) >= navSection.getBoundingClientRect().bottom
-         && getQuarterY(navSection, 1) < navSection.getBoundingClientRect().bottom) {
-            if(navWork.classList[0] == "activeNav") { }
-            else if(navWork.classList[0] == null) {
-                if(navAbout.classList[0] != null) {
-                    navAbout.classList.remove("activeNav");
-                }
-                if(navContact.classList[0] != null) {
-                    navContact.classList.remove("activeNav");
-                }
-                navWork.classList.add("activeNav");
+    if(lastScrollPos > this.window.scrollY){
+        for(let i = 0; i < sections.length; i++) {
+            if (i == currentSection){
+                i = sections.length;
             }
-        }
-        if(getQuarterY(aboutSection, 1) >= navSection.getBoundingClientRect().bottom) {
-            if(navAbout.classList[0] == "activeNav") { }
-            else if(navAbout.classList[0] == null) {
-                if(navWork.classList[0] != null) {
-                    navWork.classList.remove("activeNav");
+            if(i != currentSection && i < sections.length){
+                if(i != sections.length - 1) {
+                    if(getQuarterY(sections[i], 1) >= navBottom && sections[i].getBoundingClientRect().top < navBottom + getQuarterY(sections[i], 3)) {
+                        classCheckRemoveAdd(i);
+                        currentSection = i;
+                        i = sections.length;
+                    }
                 }
-                if(navContact.classList[0] != null) {
-                    navContact.classList.remove("activeNav");
-                }
-                navAbout.classList.add("activeNav");
             }
         }
         lastScrollPos = this.window.scrollY;
     }
 });
-
-for(const link of links) {
-    link.addEventListener("click", clickEventHandler);
-}
 
 function clickEventHandler(event) {
     event.preventDefault();
@@ -102,4 +75,3 @@ function clickEventHandler(event) {
         behavior: "smooth"
     });
 }
-
