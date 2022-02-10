@@ -1,3 +1,4 @@
+/*********************** Global Styling *********************/
 * {
     margin: 0;
     padding: 0;
@@ -12,81 +13,8 @@ a {
     color: rgb(231, 150, 0);
     text-decoration: none;
 }
-#nav {
-    position: fixed;
-    top: 0;
-    display: flex;
-    width: 100vw;
-    height: 6vh;
-    align-items: center;
-    background-color: rgb(64, 64, 64);
-    justify-content: flex-end;
-    z-index: 1;
-}
-#nav > a {
-    margin-right: 2vw;
-    font-size: 1.15rem;
-}
-#nav > a:hover {
-    text-decoration: underline;
-}
-#nav > a.activeNav {
-    text-decoration: underline;
-    font-size: 1.6rem;
-}
 
-section {
-    position: relative;
-    width: 100vw;
-    height: 94vh;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
-
-#home {
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-top: 6vh;
-}
-
-#desc-top {
-    margin-bottom: 40vh;
-}
-#desc-bottom {
-    margin-top: 40vh;
-}
-.desc {
-    width: 25%;
-    height: 25vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.desc p{
-    padding: 5px;
-    width: 80%;
-    font-size: 1.5rem;
-    text-align: center;
-    border: 4px solid rgb(64, 64, 64);
-}
-
-#portrait {
-    display: block;
-    width: calc(40vh * 0.75);
-    height: 40vh;
-    border: none;
-    border-radius: 100%;
-    border: 4px solid rgb(64, 64, 64);
-}
-
-#word-art {
-    display: block;
-    width: 25%;
-    height: 25vw;
-}
-
+/*********************** Flow Helpers *********************/
 .rectangle {
     position: absolute;
     height: 30vh;
@@ -114,6 +42,85 @@ section {
     right: 50vw;
 }
 
+/*********************** Nav *********************/
+#nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    height: 6vh;
+    align-items: center;
+    background-color: rgb(64, 64, 64);
+    justify-content: flex-end;
+    z-index: 1;
+}
+#nav > a {
+    margin-right: 2vw;
+    font-size: 1.15rem;
+}
+#nav > a:hover {
+    text-decoration: underline;
+}
+#nav > a.activeNav {
+    text-decoration: underline;
+    font-size: 1.6rem;
+}
+
+/*********************** Content Styling *********************/
+section {
+    position: relative;
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/*********************** Home *********************/
+#home {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 6vh;
+}
+
+#desc-top {
+    margin-bottom: 40vh;
+}
+#desc-bottom {
+    margin-top: 40vh;
+}
+.desc {
+    width: 25%;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desc p{
+    padding: 5px;
+    width: 80%;
+    font-size: 1.15rem;
+    text-align: center;
+    border: 4px solid rgb(64, 64, 64);
+}
+
+#portrait {
+    display: block;
+    width: calc(40vh * 0.75);
+    height: 40vh;
+    border: none;
+    border-radius: 100%;
+    border: 4px solid rgb(64, 64, 64);
+}
+
+#word-art {
+    display: block;
+    width: 25%;
+    height: 25vw;
+}
+
+/*********************** Work *********************/
 #work {
     flex-wrap: wrap;
     justify-content: center;
@@ -127,6 +134,13 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
 }
+@media only screen and (min-width: 1270px) {
+    #projects {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
 #projects > div {
     display: flex;
     margin: calc(5% - 8px);
@@ -136,29 +150,6 @@ section {
     animation: off-hover 0.5s 1;
     justify-content: center;
     align-items: center;
-}
-#projects > div:hover {
-    animation: on-hover 0.5s 1 forwards;
-}
-#projects > div:hover > p {
-    display: none;
-}
-#projects > div > p {
-    display: block;
-    position: absolute;
-    color: hsl(39, 100%, 50%);
-    letter-spacing: .025rem;
-}
-#projects > div > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    animation: off-hover-filter 0.5s forwards;
-}
-#projects > div > a:hover {
-    animation: on-hover-filter 0.5s forwards;
 }
 @keyframes off-hover {
     from {
@@ -172,13 +163,8 @@ section {
         height: 40%;
     }
 }
-@keyframes off-hover-filter {
-    from {
-
-    }
-    to {
-        filter: blur(2px) brightness(50%);
-    }
+#projects > div:hover {
+    animation: on-hover 0.5s 1 forwards;
 }
 @keyframes on-hover {
     from {
@@ -192,6 +178,36 @@ section {
         height: 45%;
     }
 }
+
+#projects > div:hover > p {
+    display: none;
+}
+#projects > div > p {
+    display: block;
+    position: absolute;
+    color: hsl(39, 100%, 50%);
+    letter-spacing: .025rem;
+}
+
+#projects > div > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: off-hover-filter 0.5s forwards;
+}
+@keyframes off-hover-filter {
+    from {
+
+    }
+    to {
+        filter: blur(2px) brightness(50%);
+    }
+}
+#projects > div > a:hover {
+    animation: on-hover-filter 0.5s forwards;
+}
 @keyframes on-hover-filter {
     from {
         filter: blur(2px) brightness(50%);
@@ -201,28 +217,24 @@ section {
     }
 }
 
-@media only screen and (min-width: 1270px) {
-    #projects {
-        width: 40vw;
-        height: 40vw;
-    }
-}
-
+/*********************** About *********************/
 #about {
     justify-content: center;
     align-items: center;
 }
-#about > div {
+#about > div#story {
     display: flex;
     justify-content: center;
+    width: 75vw;
 }
-#about > div > p{
+#about > div#story > p{
     padding: 5px;
     width: 80%;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     text-align: left;
     border: 4px solid rgb(64, 64, 64);
 }
 
+/*********************** Contact *********************/
 #contact {
 }
