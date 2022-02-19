@@ -1,0 +1,50 @@
+/*********************** Home *********************/
+
+#home-spice {
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-spice > img {
+    filter: invert(100%);
+    height: 100%;
+    max-width: 100%;
+}
+@media only screen and (min-width: 769px) {
+    #home {
+        margin-top: 7vh;
+    }
+    #home > .desktop {
+        display: inline;
+    }
+    #home-main > p{
+        margin: 2vh 0 5vh 0;
+    }
+    #home-spice > img {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    #home {
+        margin-top: 10vh;
+        height: 90vh;
+        width: 100vw;
+        overflow-y: clip;
+    }
+    #home-main {
+        padding-top: 3vh;
+        height: 50%;
+    }
+    p#title {
+        margin-top: 5%;
+    }
+    p#title + p {
+        margin-top: 25%;
+    }
+    #home-spice {
+        margin-bottom: 5vh;
+    }
+}

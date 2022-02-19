@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/work.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <nav id="mobile-nav">
+    <div id="mobile-nav-bar">
+      <div id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <input type="checkbox" id="checkbox"></div>
+    </div>
+    <div id="drop-nav">
+      <a id="in-page-link" class="activeNav" href="#home">Home</a>
+      <a id="in-page-link" class="" href="#work">Work</a>
+      <a id="in-page-link" class="" href="#about">About</a>
+      <a id="in-page-link" class="" href="#contact">Contact</a>
+    </div>
+    <div id="body-filter"></div>
+  </nav>
+  
+  <nav id="desktop-nav">
+    <a id="in-page-link" class="activeNav" href="#home">Home</a>
+    <a id="in-page-link" class="" href="#work">Work</a>
+    <a id="in-page-link" class="" href="#about">About</a>
+    <a id="in-page-link" class="" href="#contact">Contact</a>
+  </nav>
+  
+  <section id="home">
+    <div class="container">
+      <div id="home-main">
+        <h1>Matthew Sudekum</h1>
+        <p id="title">Frontend <br> Web Developer</p>
+        <p>Looking for the right company to show what I can do</p>
+      </div>
+      <div id="home-spice">
+        <img src="images/complete-process.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h1>Work</h1>
+    <div id="projects">
+      <div>
+        <a href="https://www.infinitelyindie.com/" style="background-image: url(images/inf-ind-site-img.png);"></a>
+        <p>Business Website</p>
+      </div>
+      <div>
+        <a href="mood-calendar/docs/index.html" style="background-image: url(images/calendar-img.png);"></a>
+        <p>Angular Mood Calendar</p>
+      </div>
+      <div>
+        <a href="exercises-website/docs/index.html" style="background-image: url(images/exercise-site-img.png);"></a>
+        <p>Angular Exercise Site</p>
+      </div>
+      <div>
+        <a href="js-calculator/Calculator.html" style="background-image: url(images/calc-img.png);"></a>
+        <p>Calculator</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h1>About</h1>
+      <p>I've been programming since I was 14 years old. I love seeing my code come to life.
+        So in 2021 I thought web dev to be the best way I could do what I love and touch the everyday lives of the average person. 
+      </p>
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>TS</li>
+        <li>Angular</li>
+        <li>PHP</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact"><!--
+    <div id="form" name="form">
+      <h1>Contact Me</h1>
+      <input type="text" placeholder=" Subject" id="subject">
+      <textarea placeholder=" Message" id="message"></textarea>
+      <input type="button" value="Send Email" id="submit" onclick="sendEmail()">
+    </div>-->
+  </section>
+  <script src="scripts/scroll-detection.js"></script>
+  <script src="scripts/email.js"></script>
+  <script src="scripts/nav-styling.js"></script>
+</body>
+</html>

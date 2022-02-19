@@ -1,0 +1,107 @@
+/*********************** Global Styling *********************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    overflow-x: hidden;
+}
+a {
+    color: rgb(231, 150, 0);
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (min-width: 769px) {
+    .mobile {
+        display: none;
+    }
+    section {
+        position: relative;
+        height: 93vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    h1 {
+        font-size: 3vmax;
+    }
+    p {
+        font-size: 1vmax;
+    }
+    h3 {
+        font-size: 1.5vmax;
+    }
+    a {
+        font-size: 1vmax;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    a {
+        font-size: 2.45vmax;
+    }
+    
+    h1 {
+        font-size: 6vmax;
+    }
+    
+    p {
+        font-size: 2.45vmax;
+    }
+    
+    h3 {
+        font-size: 2.85vmax;
+    }
+    .container {
+        margin: 0 10vw;
+        height: 100%;
+    }
+}
+
+/*********************** Flow Helpers *********************/
+.rectangle {
+    position: absolute;
+    height: 30vh;
+    width: 70vw;
+    background-color: rgb(64, 64, 64);
+}
+.top-left-rect {
+    transform: rotate(-25deg);
+    bottom: 84vh;
+    right: 50vw;
+}
+.bottom-right-rect {
+    transform: rotate(-25deg);
+    top: 84vh;
+    left: 50vw;
+}
+.top-right-rect {
+    transform: rotate(25deg);
+    bottom: 84vh;
+    left: 50vw;
+}
+.bottom-left-rect {
+    transform: rotate(25deg);
+    top: 84vh;
+    right: 50vw;
+}
+@media only screen and (max-width: 768px) {
+    .rectangle {
+        display: none;
+    }
+}

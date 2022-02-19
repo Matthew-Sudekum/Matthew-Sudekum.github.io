@@ -4,13 +4,35 @@
   <meta charset="utf-8">
   <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/work.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/contact.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <nav id="nav">
+  <nav id="mobile-nav">
+    <div id="mobile-nav-bar">
+      <div id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <input type="checkbox" id="checkbox"></div>
+    </div>
+    <div id="drop-nav">
+      <a id="in-page-link" class="activeNav" href="#home">Home</a>
+      <a id="in-page-link" class="" href="#work">Work</a>
+      <a id="in-page-link" class="" href="#about">About</a>
+      <a id="in-page-link" class="" href="#contact">Contact</a>
+    </div>
+    <div id="body-filter"></div>
+  </nav>
+  
+  <nav id="desktop-nav">
     <a id="in-page-link" class="activeNav" href="#home">Home</a>
     <a id="in-page-link" class="" href="#work">Work</a>
     <a id="in-page-link" class="" href="#about">About</a>
@@ -19,34 +41,51 @@
   
   <section id="home">
     <div class="rectangle top-left-rect"></div>
-    <div class="desc" id="desc-bottom">
-      <p>I've come a long way in a short time and plan to go much further. This site will be a showcase to what I've accomplished.</p>
-    </div>
-    <img src="assets/portrait.jpg" alt="portrait" id="portrait">
-    <div class="desc" id="desc-top">
-      <p>Passion driven programmer for 8 years, with 1 year in web development.</p>
+    <div class="container">
+      <div id="home-main">
+        <h1>Matthew <br class="desktop">Sudekum</h1>
+        <p id="title">Frontend <br> Web Developer</p>
+        <p>Looking for the right company <br class="desktop">to show what I can do</p>
+      </div>
+      <div id="home-spice">
+        <img src="images/complete-process.svg" alt="">
+      </div>
     </div>
     <div class="rectangle bottom-right-rect"></div>
   </section>
 
   <section id="work">
     <div class="rectangle top-right-rect"></div>
-    <div id="projects">
-      <div>
-        <a href="https://www.infinitelyindie.com/" style="background-image: url(assets/inf-ind-site-img.png);"></a>
-        <p>Business Website</p>
-      </div>
-      <div>
-        <a href="mood-calendar/docs/index.html" style="background-image: url(assets/calendar-img.png);"></a>
-        <p>Angular Mood Calendar</p>
-      </div>
-      <div>
-        <a href="exercises-website/docs/index.html" style="background-image: url(assets/exercise-site-img.png);"></a>
-        <p>Angular Exercise Site</p>
-      </div>
-      <div>
-        <a href="js-calculator/Calculator.html" style="background-image: url(assets/calc-img.png);"></a>
-        <p>Calculator</p>
+    <div class="container">
+      <h1>Work</h1>
+      <div id="projects">
+        <div>
+          <a class="desktop" href="https://www.infinitelyindie.com/" style="background-image: url(images/inf-ind-site-img.png);"></a>
+          <div class="mobile" style="background-image: url(images/inf-ind-site-img.png);"></div>
+          <p>Business Website</p>
+          <a class="mobile" href="mood-calendar/docs/index.html">Live</a>
+        </div>
+        <div>
+          <a class="desktop" href="mood-calendar/docs/index.html" style="background-image: url(images/calendar-img.png);"></a>
+          <div class="mobile" style="background-image: url(images/calendar-img.png);"></div>
+          <p>Angular Mood Calendar</p>
+          <a class="mobile" href="mood-calendar/docs/index.html">Live</a>
+          <a class="mobile" href="https://github.com/Matthew-Sudekum/Mood-Calendar">GitHub</a>
+        </div>
+        <div>
+          <a class="desktop" href="exercises-website/docs/index.html" style="background-image: url(images/exercise-site-img.png);"></a>
+          <div class="mobile" style="background-image: url(images/exercise-site-img.png);"></div>
+          <p>Angular Exercise Site</p>
+          <a class="mobile" href="exercises-website/docs/index.html">Live</a>
+          <a class="mobile" href="https://github.com/Matthew-Sudekum/Exercise-Website">GitHub</a>
+        </div>
+        <div>
+          <a class="desktop" href="js-calculator/Calculator.html" style="background-image: url(images/calc-img.png);"></a>
+          <div class="mobile" style="background-image: url(images/calc-img.png);"></div>
+          <p>Calculator</p>
+          <a class="mobile" href="js-calculator/Calculator.html">Live</a>
+          <a class="mobile" href="https://github.com/Matthew-Sudekum/JS-Calculator">GitHub</a>
+        </div>
       </div>
     </div>
     <div class="rectangle bottom-left-rect"></div>
@@ -54,22 +93,41 @@
 
   <section id="about">
     <div class="rectangle top-left-rect"></div>
-    <div id="story">
-      <p>I started off like most self taught web devs. I found the wisdom of an online course. After completing the 
-        <a href="https://school.studioweb.com/store/course/complete_web_developer">Complete Web Developer</a> course by Stefan Mischook,
-         I built a full stack web app.<br><br>Now by this point I had heard of frameworks and how they are used by everyone.
-          So I made the all to common mistake of delving into them before I had solidified my vanilla JavaScript. I made 2 projects using Angular,
-           found here and on my <a href="https://github.com/Matthew-Sudekum/">GitHub</a>.<br><br>Now, thanks to the wisdom of fellow web devs with jobs
-            in the industry, I decided to steer my journey back to the bare-bones graveyard of JavaScript and web development.<br><br>
-            I'm now making sites with much better feel to them without nearly as much complexity. Let this site be your guide to my past, present, and <a href="#contact" id="in-page-link">future</a>.</p>
+    <div class="container">
+      <h1>About</h1>
+      <p>I've been programming since I was 14 years old. I love seeing my code come to life.
+        So in 2021 I thought web dev to be the best way I could do what I love and touch the everyday lives of the average person. 
+      </p>
+      <h3>Skills</h3>
+      <div>
+        <img src="images/html-logo.png" alt="">
+        <img src="images/css-logo.png" alt="">
+        <img src="images/javascript-logo.png" alt="">
+        <img src="images/typescript-logo.png" alt="">
+        <img src="images/angular-logo.png" alt="">
+        <img src="images/php-logo.png" alt="">
+      </div>
     </div>
     <div class="rectangle bottom-right-rect"></div>
   </section>
 
   <section id="contact">
     <div class="rectangle top-right-rect"></div>
+    <div class="container">
+      <div id="form" name="form">
+        <h1>Contact Me</h1>
+        <input type="text" placeholder=" Subject" id="subject">
+        <textarea placeholder=" Message" id="message"></textarea>
+        <input type="button" value="Send Email" id="submit" onclick="sendEmail()">
+      </div>
+      <h3>Extra Links</h3>
+      <li><a href="https://github.com/Matthew-Sudekum/">GitHub</a></li>
+    </div>
     <div class="rectangle bottom-left-rect"></div>
   </section>
+
   <script src="scripts/scroll-detection.js"></script>
+  <script src="scripts/email.js"></script>
+  <script src="scripts/nav-styling.js"></script>
 </body>
 </html>

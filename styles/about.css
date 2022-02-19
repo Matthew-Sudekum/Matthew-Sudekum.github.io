@@ -1,0 +1,83 @@
+/*********************** About *********************/
+@media only screen and (min-width: 769px) {
+    #about {
+        display: flex;
+        justify-content: center;
+    }
+    #about > .container {
+        width: 50%;
+    }
+    #about > .container > p {
+        margin: 2vh 0 5vh 0;
+    }
+    #about > .container > h3 {
+        margin-bottom: 2vh;
+    }
+    #about > .container > div {
+        width: 75%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        row-gap: 10%;
+    }
+    #about > .container > div > img {
+        object-fit: contain;
+        width: 100px;
+        height: auto;
+        margin-bottom: 3%;
+    }
+    @media only screen and (max-width: 1024px){
+        #about > .container > div > img {
+            width: 75px;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    #about {
+        padding-top: 3vh;
+        height: 87vh;
+        width: 100vw;
+    }
+    #about > .container {
+        height: calc(100% - 3vh);
+    }
+    #about > .container > p:nth-child(2) {
+        margin-top: 5%;
+        margin-bottom: 20%;
+    }
+    #about > .container > h3 {
+        margin-bottom: 5%;
+    }
+    #about > .container > div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        row-gap: 10%;
+    }
+    #about > .container > div > img {
+        object-fit: contain;
+        width: 150px;
+        height: auto;
+        margin-bottom: 3%;
+    }
+    @media only screen and (max-width: 650px){
+        #about > .container > div > img {
+            width: 100px;
+        }
+        @media only screen and (max-width: 400px){
+            #about > .container > div > img {
+                width: 75px;
+            }
+            @media only screen and (max-width: 325px){
+                #about > .container > div > img {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}

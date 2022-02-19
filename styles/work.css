@@ -1,0 +1,169 @@
+/*********************** Work *********************/
+@media only screen and (min-width: 769px) {
+    #work {
+        display: flex;
+        justify-content: center;
+    }
+    #projects > div > .mobile {
+        display: none;
+    }
+    #projects {
+        width: 40vw;
+        height: 40vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media only screen and (max-width: 1024px) {
+        #projects {
+            width: 50vw;
+            height: 50vw;
+        }
+    }
+    #projects > div {
+        display: flex;
+        margin: calc(5% - 8px);
+        width: 40%;
+        height: 40%;
+        border: 4px solid rgb(64, 64, 64);
+        animation: off-hover 0.5s 1;
+        justify-content: center;
+        align-items: center;
+    }
+    @keyframes off-hover {
+        from {
+            margin: calc(2.5% - 8px);
+            width: 45%;
+            height: 45%;
+        }
+        to {
+            margin: calc(5% - 8px);
+            width: 40%;
+            height: 40%;
+        }
+    }
+    #projects > div:hover {
+        animation: on-hover 0.5s 1 forwards;
+    }
+    @keyframes on-hover {
+        from {
+            margin: calc(5% - 8px);
+            width: 40%;
+            height: 40%;
+        }
+        to {
+            margin: calc(2.5% - 8px);
+            width: 45%;
+            height: 45%;
+        }
+    }
+    #projects > div:hover > p {
+        display: none;
+    }
+    #projects > div > p {
+        display: block;
+        position: absolute;
+        color: hsl(39, 100%, 50%);
+        letter-spacing: .025rem;
+    }
+    #projects > .desktop {
+        display: block;
+    }
+    #projects > div > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: off-hover-filter 0.5s forwards;
+    }
+    @keyframes off-hover-filter {
+        from {
+    
+        }
+        to {
+            filter: blur(2px) brightness(50%);
+        }
+    }
+    #projects > div > a:hover {
+        animation: on-hover-filter 0.5s forwards;
+    }
+    @keyframes on-hover-filter {
+        from {
+            filter: blur(2px) brightness(50%);
+        }
+        to {
+    
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    #work > .container > h1 {
+        padding-top: 3vh;
+    }
+
+    #projects {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects > div {
+        position: relative;
+        display: flex;
+        margin-top: 10vh;
+        height: 28.5vh;
+        width: 80vw;
+        border: 4px solid rgb(64, 64, 64);
+        justify-content: center;
+        align-items: center;
+    }
+    #projects > div:first-child {
+        margin-top: 5vh;
+    }
+    #projects > div:last-child {
+        margin-bottom: 15vh;
+    }
+
+    #projects > div > div {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        filter: blur(2px) brightness(50%)
+    }
+    #projects > div > a {
+        position: absolute;
+        width: 40%;
+        height: 12%;
+        bottom: -20%;
+        text-align: center;
+        color: rgb(231, 150, 0);
+        border: 4px solid rgb(64, 64, 64);
+        border-style: inset;
+        border-left-color: hsl(0, 0%, 80%);
+        border-top-color: hsl(0, 0%, 80%);
+        background-color: rgb(64, 64, 64);
+    }
+    #projects > div > a:active {
+        border-style: outset;     
+        border-left-color: rgb(64, 64, 64);
+        border-top-color: rgb(64, 64, 64);
+        border-right-color: hsl(0, 0%, 80%);
+        border-bottom-color: hsl(0, 0%, 80%);
+    }
+    #projects > div:not(:first-child) > a:nth-child(4) {
+        left: 0;
+    }
+    #projects > div:not(:first-child) > a:last-child {
+        right: 0;
+    }
+    #projects > div > p {
+        display: block;
+        max-width: 90%;
+        position: absolute;
+        color: white;
+        letter-spacing: .025rem;
+        text-align: center;
+    }
+}

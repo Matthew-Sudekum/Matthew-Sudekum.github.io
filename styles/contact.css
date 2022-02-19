@@ -1,0 +1,65 @@
+/*********************** Contact *********************/
+#form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    font-family: inherit;
+    margin-top: 1vh;
+    border: 4px solid rgb(64, 64, 64);
+}
+#subject {
+    background-color: whitesmoke;
+    margin-top: 10%;
+    width: calc(100% - 8px);
+}
+#message {
+    background-color: whitesmoke;
+    font-family: inherit;
+    margin-top: 1vh;
+    border: 4px solid rgb(64, 64, 64);
+    text-align: start;
+    width: calc(100% - 8px);
+    height: 20vh;
+    resize: none;
+    overflow-y: scroll;
+    
+}
+#submit {
+    height: 15%;
+    color: rgb(231, 150, 0);
+    border-style: inset;
+    border-left-color: hsl(0, 0%, 80%);
+    border-top-color: hsl(0, 0%, 80%);
+    background-color: rgb(64, 64, 64);
+}
+#submit:active {
+    border-style: outset;     
+    border-left-color: rgb(64, 64, 64);
+    border-top-color: rgb(64, 64, 64);
+    border-right-color: hsl(0, 0%, 80%);
+    border-bottom-color: hsl(0, 0%, 80%);
+}
+
+@media only screen and (min-width: 769px) {
+    #contact > .container > #form {
+        width: 40%;
+        margin-bottom: 7vh;
+    }
+    #subject {
+        margin-top: 5%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #contact {
+        padding-top: 3vh;
+        width: 100vw;
+        height: 87vh;
+    }
+    #form {
+        margin-bottom: 15%;
+    }
+    #contact > .container > h3 {
+        margin-bottom: 2%;
+    }
+}
