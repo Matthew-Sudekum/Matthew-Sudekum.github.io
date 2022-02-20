@@ -14,7 +14,7 @@ function chooseNavAssigns(){
     }
     navBottom = nav.getBoundingClientRect().bottom;
 }
-window.addEventListener("load", chooseNavAssigns)
+window.addEventListener("load", chooseNavAssigns);
 
 for(const link of links) {
     link.addEventListener("click", clickEventHandler);
