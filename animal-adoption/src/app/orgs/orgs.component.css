@@ -1,0 +1,112 @@
+.body {
+    margin-top: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.container > h2 {
+    text-decoration: underline;
+    margin-bottom: 2vh;
+}
+
+#postalcode {
+    min-height: 5vh;
+    width: 20vw;
+    margin-bottom: 3vh;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+@media screen and (min-width: 767px) {
+    #postalcode {
+        width: 130px;
+    }
+}
+
+#search {
+    background-color: hsl(106, 100%, 43%);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px;
+    margin-top: 1vh;
+    box-shadow: -2px -2px 1px hsl(106, 100%, 30%);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pageSelectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25vw;
+}
+.pageSelectors > p {
+    color: hsl(106, 100%, 35%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: -1.5px -1.5px 1px hsl(106, 100%, 25%);
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    margin: 2vh 0;
+    background:transparent;
+    width: 100%;
+    height: 3vh;
+    /*border-left: 2px solid black;
+    border-right: 2px solid black;*/
+}
+input[type=range]::-moz-range-thumb {
+    background-color: hsl(106, 100%, 43%);
+    width: 5%;
+    height: 130%;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: -2px -2px 1px hsl(106, 100%, 30%);
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: hsl(106, 100%, 43%);
+    width: 6.5%;
+    height: 550%;
+    border: 1px solid black;
+    border-radius: 3px;
+    transform: translateY(-40%);
+    box-shadow: -2px -2px 1px hsl(106, 100%, 30%);
+}
+@media screen and (min-width: 425px) {
+    input[type=range]::-moz-range-thumb {
+        width: 15px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        width: 15px;
+    }
+}
+input[type=range]::-moz-range-track {
+    background-color: hsl(106, 92%, 77%);
+    border: 1px solid black;
+    /*border-left: none;
+    border-right: none;*/
+    height: 1vh;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: hsl(106, 92%, 77%);
+    border: 1px solid black;
+    /*border-left: none;
+    border-right: none;*/
+    height: 1vh;
+}

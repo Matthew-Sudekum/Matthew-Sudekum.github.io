@@ -1,0 +1,6 @@
+<div class="container" (click)="showPage()">
+    <p id="name">{{ item.attributes.name }}</p>
+    <img src="{{ item.attributes.pictureThumbnailUrl }}" alt="No Picture Provided">
+    <p id="distance">{{ item.attributes.distance }} miles</p>
+</div>
+<app-animal-page [animal]="item"></app-animal-page>

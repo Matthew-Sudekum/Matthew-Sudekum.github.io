@@ -1,0 +1,21 @@
+<div class="body">
+    <div class="container">
+        <h2>Organizations</h2>
+        <input type="text" name="postalcode" id="postalcode" placeholder="ZIP Code" (input)="zipCodeChanged($event)">
+        <p>Distance: {{ distance }} miles</p>
+        <input type="range" min="10" max="200" value="25" name="distSlider" id="distSlider" (input)="distanceChanged($event)">
+        <button id="search" (click)="search()">Search</button>
+    </div>
+    <div class="pageSelectors" *ngIf="apiService.items.length > 0">
+        <p class="chevron" (click)="prevPage()">&#60;</p>
+        <p class="chevron" (click)="nextPage()">&#62;</p>
+    </div>
+    <div class="list">
+        <app-org-list-item *ngFor="let item of apiService.items; even as isEven"
+            [class.rightBorder] = "isEven" [item] = "item"></app-org-list-item>
+    </div>
+    <div class="pageSelectors" *ngIf="apiService.items.length > 0">
+        <p class="chevron" (click)="prevPage()">&#60;</p>
+        <p class="chevron" (click)="nextPage()">&#62;</p>
+    </div>
+</div>
