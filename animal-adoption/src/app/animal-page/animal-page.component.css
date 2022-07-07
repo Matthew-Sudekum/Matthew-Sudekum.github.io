@@ -31,6 +31,10 @@
     right: 15px;
     top: 2.5vh;
 }
+#x:hover {
+    cursor: pointer;
+}
+
 .x {
     position: absolute;
     width: 30px;

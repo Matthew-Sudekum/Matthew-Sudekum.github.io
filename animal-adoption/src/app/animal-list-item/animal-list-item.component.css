@@ -12,6 +12,9 @@
     background-color: rgba(0, 0, 0, 0.05);
     text-align: center;
 }
+.container:hover {
+    cursor: pointer;
+}
 
 img {
     max-height: 70%;
@@ -19,6 +22,6 @@ img {
 
 @media screen and (min-width: 768px) {
     .container {
-        width: calc(25vw - 38px);
+        width: calc(22vw - 38px);
     }
 }

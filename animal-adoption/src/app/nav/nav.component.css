@@ -9,7 +9,7 @@
     transform: translateX(3.5vw);
     line-height: 9vh;
 }
-#title > h2:hover {
+#title > h1:hover {
     cursor: pointer;
 }
 #desktop-nav {
@@ -91,6 +91,9 @@
     width: 7.75vh;
     height: 7vh;
     left: -0.375vh;
+}
+#checkbox:hover {
+    cursor: pointer;
 }
 
 #drop-nav {

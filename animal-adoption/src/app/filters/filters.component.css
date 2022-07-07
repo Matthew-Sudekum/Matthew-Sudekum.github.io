@@ -103,3 +103,7 @@ p.button {
 .checked {
     background-color: rgb(51, 219, 0);
 }
+
+button:hover, .button:hover {
+    cursor: pointer;
+}
