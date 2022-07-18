@@ -24,7 +24,7 @@ function getQuarterY(elem, multFactor) {
     return elem.getBoundingClientRect().top + ((elem.clientHeight / 4) * multFactor);
 }
 
-//adds or removes the activeNav class from each nav element
+//Function adds or removes the activeNav class from each nav element
 function classCheckRemoveAdd(i) {
     for(const link of links) {
         if(link.classList[0] != null){

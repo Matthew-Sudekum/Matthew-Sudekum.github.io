@@ -10,6 +10,9 @@ body {
     color: white;
     overflow-x: hidden;
 }
+h1 {
+    font-size: 42px;
+}
 a {
     color: rgb(231, 150, 0);
     text-decoration: none;
@@ -35,37 +38,10 @@ a {
         align-items: center;
         text-align: center;
     }
-    h1 {
-        font-size: 3vmax;
-    }
-    p {
-        font-size: 1vmax;
-    }
-    h3 {
-        font-size: 1.5vmax;
-    }
-    a {
-        font-size: 1vmax;
-    }
 }
 @media only screen and (max-width: 768px) {
     .desktop {
         display: none;
-    }
-    a {
-        font-size: 2.45vmax;
-    }
-    
-    h1 {
-        font-size: 6vmax;
-    }
-    
-    p {
-        font-size: 2.45vmax;
-    }
-    
-    h3 {
-        font-size: 2.85vmax;
     }
     .container {
         margin: 0 10vw;
