@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/nav.css">
   <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/services.css">
   <link rel="stylesheet" href="styles/work.css">
   <link rel="stylesheet" href="styles/about.css">
   <link rel="stylesheet" href="styles/contact.css">
@@ -25,6 +26,7 @@
     </div>
     <div id="drop-nav">
       <a id="in-page-link" class="activeNav" href="#home">Home</a>
+      <a id="in-page-link" class="" href="#services">Services</a>
       <a id="in-page-link" class="" href="#work">Work</a>
       <a id="in-page-link" class="" href="#about">About</a>
       <a id="in-page-link" class="" href="#contact">Contact</a>
@@ -34,6 +36,7 @@
   
   <nav id="desktop-nav">
     <a id="in-page-link" class="activeNav" href="#home">Home</a>
+    <a id="in-page-link" class="" href="#services">Services</a>
     <a id="in-page-link" class="" href="#work">Work</a>
     <a id="in-page-link" class="" href="#about">About</a>
     <a id="in-page-link" class="" href="#contact">Contact</a>
@@ -48,51 +51,60 @@
         <p>I've got a process that is simple and personal,<br>
            From building a new website or redisigning an old one<br>
            to just servicing your site with content updates, large or small.
-           </p>
+        </p>
       </div>
     </div>
     <div class="rectangle bottom-right-rect"></div>
   </section>
 
-  <section id="work">
+  <section id="services">
     <div class="rectangle top-right-rect"></div>
     <div class="container">
-      <h1>Work</h1>
-      <div id="projects">
+      <h1>Services</h1>
+      <div id="service-cards">
         <div>
-          <a class="desktop" href="https://www.infinitelyindie.com/" style="background-image: url(images/inf-ind-site-img.png);"></a>
-          <div class="mobile" style="background-image: url(images/inf-ind-site-img.png);"></div>
-          <p>Business Website</p>
-          <a class="mobile" href="https://www.infinitelyindie.com/">Live</a>
+          <p class="card-front">Site Building</p>
+          <p class="card-back inactive-card">I offer complete site building from scratch. This can be a new site, a redesign,
+             or even just a page.</p>
         </div>
         <div>
-          <a class="desktop" href="animal-adoption/docs/index.html" style="background-image: url(images/animal-adopt-img.png);"></a>
-          <div class="mobile" style="background-image: url(images/animal-adopt-img.png);"></div>
-          <p>Rescue Animal Lookup</p>
-          <a class="mobile" href="animal-adoption/docs/index.html">Live</a>
-          <a class="mobile" href="https://github.com/Matthew-Sudekum/Animal-Adoption">GitHub</a>
-        </div>
-        <div>
-          <a class="desktop" href="mood-calendar/docs/index.html" style="background-image: url(images/calendar-img.png);"></a>
-          <div class="mobile" style="background-image: url(images/calendar-img.png);"></div>
-          <p>Angular Mood Calendar</p>
-          <a class="mobile" href="mood-calendar/docs/index.html">Live</a>
-          <a class="mobile" href="https://github.com/Matthew-Sudekum/Mood-Calendar">GitHub</a>
-        </div>
-        <div>
-          <a class="desktop" href="exercises-website/docs/index.html" style="background-image: url(images/exercise-site-img.png);"></a>
-          <div class="mobile" style="background-image: url(images/exercise-site-img.png);"></div>
-          <p>Angular Exercise Site</p>
-          <a class="mobile" href="exercises-website/docs/index.html">Live</a>
-          <a class="mobile" href="https://github.com/Matthew-Sudekum/Exercise-Website">GitHub</a>
+          <p class="card-front">Search Engine Optimization (SEO)</p>
+          <p class="card-back inactive-card">This includes internally optimizing page code to rank better in Google's search results, as well as
+             uploading content to pull in more traffic to your site.</p>
         </div>
       </div>
     </div>
     <div class="rectangle bottom-left-rect"></div>
   </section>
 
-  <section id="about">
+  <section id="work">
     <div class="rectangle top-left-rect"></div>
+    <div class="container">
+      <h1>Work</h1>
+      <div id="projects">
+        <div>
+          <a class="desktop" href="https://www.infinitelyindie.com/" style="background-image: url(images/inf-ind-site-img.png);"></a>
+          <p>Business Website</p>
+        </div>
+        <div>
+          <a class="desktop" href="animal-adoption/docs/index.html" style="background-image: url(images/animal-adopt-img.png);"></a>
+          <p>Offsite Database Search</p>
+        </div>
+        <div>
+          <a class="desktop" href="mood-calendar/docs/index.html" style="background-image: url(images/calendar-img.png);"></a>
+          <p>Mood Calendar Functionality</p>
+        </div>
+        <div>
+          <a class="desktop" href="exercises-website/docs/index.html" style="background-image: url(images/exercise-site-img.png);"></a>
+          <p>Exercise Site (Local Database)</p>
+        </div>
+      </div>
+    </div>
+    <div class="rectangle bottom-right-rect"></div>
+  </section>
+
+  <section id="about">
+    <div class="rectangle top-right-rect"></div>
     <div class="container">
       <h1>About</h1>
       <p>I'm an expecting father and full time web developer based in Clio, Michigan. 
@@ -101,11 +113,11 @@
         tasks involved with having the best website suited for their customers, please don't hesitate to reach out to me below.
       </p>
     </div>
-    <div class="rectangle bottom-right-rect"></div>
+    <div class="rectangle bottom-left-rect"></div>
   </section>
 
   <section id="contact">
-    <div class="rectangle top-right-rect"></div>
+    <div class="rectangle top-left-rect"></div>
     <div class="container">
       <div id="form" name="form">
         <h1>Contact Me</h1>
@@ -116,11 +128,12 @@
       <label>Email: <a href="mailto: Matthew.Sudekum@outlook.com">Matthew.Sudekum@outlook.com</a></label>
       
     </div>
-    <div class="rectangle bottom-left-rect"></div>
+    <div class="rectangle bottom-right-rect"></div>
   </section>
 
   <script src="scripts/scroll-detection.js"></script>
   <script src="scripts/email.js"></script>
   <script src="scripts/nav-styling.js"></script>
+  <script src="scripts/cards.js"></script>
 </body>
 </html>

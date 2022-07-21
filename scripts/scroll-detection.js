@@ -32,8 +32,8 @@ function classCheckRemoveAdd(i) {
         }
     }
     links[i].classList.add("activeNav");
-    if(links[i + 4] != null){
-        links[i + 4].classList.add("activeNav");
+    if(links[i + 5] != null){
+        links[i + 5].classList.add("activeNav");
     }
 }
 
