@@ -4,6 +4,9 @@
     background-color: rgb(43, 43, 43);
     transition: transform 0.8s;
 }
+#service-cards > div:hover {
+    cursor: pointer;
+}
 #service-cards > div > p {
     margin: auto 10px;
     display: block;
