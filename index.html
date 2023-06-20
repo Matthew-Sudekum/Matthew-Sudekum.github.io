@@ -1,139 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/nav.css">
-  <link rel="stylesheet" href="styles/home.css">
-  <link rel="stylesheet" href="styles/services.css">
-  <link rel="stylesheet" href="styles/work.css">
-  <link rel="stylesheet" href="styles/about.css">
-  <link rel="stylesheet" href="styles/contact.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+  <title>Home | Matthew Sudekum</title>
 </head>
 <body>
-  <nav id="mobile-nav">
-    <div id="mobile-nav-bar">
-      <div id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <input type="checkbox" id="checkbox"></div>
-    </div>
-    <div id="drop-nav">
-      <a id="in-page-link" class="activeNav" href="#home">Home</a>
-      <a id="in-page-link" class="" href="#services">Services</a>
-      <a id="in-page-link" class="" href="#work">Work</a>
-      <a id="in-page-link" class="" href="#about">About</a>
-      <a id="in-page-link" class="" href="#contact">Contact</a>
-    </div>
-    <div id="body-filter"></div>
-  </nav>
-  
-  <nav id="desktop-nav">
-    <a id="in-page-link" class="activeNav" href="#home">Home</a>
-    <a id="in-page-link" class="" href="#services">Services</a>
-    <a id="in-page-link" class="" href="#work">Work</a>
-    <a id="in-page-link" class="" href="#about">About</a>
-    <a id="in-page-link" class="" href="#contact">Contact</a>
-  </nav>
-  
-  <section id="home">
-    <div class="rectangle top-left-rect"></div>
-    <div class="container">
-      <div id="home-main">
-        <h1>Matthew <br class="desktop">Sudekum</h1>
-        <p id="title">Web Developer</p>
-        <p>I've got a process that is simple and personal,<br>
-           From building a new website or redisigning an old one<br>
-           to just servicing your site with content updates, large or small.
-        </p>
+  <header>
+    <nav>
+      <p id="name"><a href="">Matthew Sudekum</a></p>
+      <ul>
+        <li><a href="pages\plugins.html">Plugins</a></li>
+        <li><a href="pages\timeline.html">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="hero">
+      <div>
+        <h1>Digital Adventurer. Problem Solver.</h1>
+        <h2>Let's see what I have for You</h2>
+        <div class="chevron-parent"><a class="chevron" href="#plugins"></a></div>
       </div>
     </div>
-    <div class="rectangle bottom-right-rect"></div>
-  </section>
-
-  <section id="services">
-    <div class="rectangle top-right-rect"></div>
-    <div class="container">
-      <h1>Services</h1>
-      <div id="service-cards">
-        <div>
-          <p class="card-front">Site Building</p>
-          <p class="card-back inactive-card">I offer complete site building from scratch. This can be a new site, a redesign,
-             or even just a page.</p>
-        </div>
-        <div>
-          <p class="card-front">Search Engine Optimization (SEO)</p>
-          <p class="card-back inactive-card">This includes internally optimizing page code to rank better in Google's search results, as well as
-             uploading content to pull in more traffic to your site.</p>
-        </div>
+    <section id="plugins">
+      <div>
+        <img src="images/wordpress_logo.svg" alt="WordPress icon" loading="lazy">
+        <a class="button" href="pages/plugins.html">Learn More</a>
       </div>
-    </div>
-    <div class="rectangle bottom-left-rect"></div>
-  </section>
-
-  <section id="work">
-    <div class="rectangle top-left-rect"></div>
-    <div class="container">
-      <h1>Work</h1>
-      <div id="projects">
-        <div>
-          <a class="desktop" href="https://www.infinitelyindie.com/" style="background-image: url(images/inf-ind-site-img.png);"></a>
-          <p>Business Website</p>
-        </div>
-        <div>
-          <a class="desktop" href="animal-adoption/docs/index.html" style="background-image: url(images/animal-adopt-img.png);"></a>
-          <p>Offsite Database Search</p>
-        </div>
-        <div>
-          <a class="desktop" href="mood-calendar/docs/index.html" style="background-image: url(images/calendar-img.png);"></a>
-          <p>Mood Calendar Functionality</p>
-        </div>
-        <div>
-          <a class="desktop" href="exercises-website/docs/index.html" style="background-image: url(images/exercise-site-img.png);"></a>
-          <p>Exercise Site (Local Database)</p>
-        </div>
+      <div>
+        <h1>My Wordpress Plugins</h1>
+        <ul>
+          <li>Over 400+ Downloads!</li>
+          <li>2 Plugins, Completely Free</li>
+          <li><a href="pages/plugins.html#Meta-Data-Importer"><span style="text-decoration: underline; color: rgb(21, 21, 21);">Meta Data Importer</span> - Makes Yoast SEO a Breeze</a></li>
+          <li><a href="pages/plugins.html#Clean-Meta-Descriptions"><span style="text-decoration: underline; color: rgb(21, 21, 21);">Clean Meta Descriptions</span> - Keeps Shortcodes Out of Search Results</a></li>
+        </ul>
       </div>
-    </div>
-    <div class="rectangle bottom-right-rect"></div>
-  </section>
-
-  <section id="about">
-    <div class="rectangle top-right-rect"></div>
-    <div class="container">
-      <h1>About</h1>
-      <p>I'm an expecting father and full time web developer based in Clio, Michigan. 
-        I've seen an opportunity to improve my local community by serving the small businesses that make their livelyhood here.</p>
-      <p>If you or someone you know has a business or is starting a business and would like someone to handle the complicated
-        tasks involved with having the best website suited for their customers, please don't hesitate to reach out to me below.
-      </p>
-    </div>
-    <div class="rectangle bottom-left-rect"></div>
-  </section>
-
-  <section id="contact">
-    <div class="rectangle top-left-rect"></div>
-    <div class="container">
-      <div id="form" name="form">
-        <h1>Contact Me</h1>
-        <input type="text" placeholder=" Subject" id="subject">
-        <textarea placeholder=" Message" id="message"></textarea>
-        <input type="button" value="Send Email" id="submit" onclick="sendEmail()">
+    </section>
+    <section id="about">
+      <div>
+        <h1>About Me</h1>
+        <ul>
+          <li>A Husband and Father</li>
+          <li>Hobbies: Programming, Camping, Gaming, and Playing with My Daughter</li>
+          <li>Programmer for 9 Years, Professionally for 1</li>
+          <li>I actively work in all common web languages: HTML, CSS, JavaScript, and PHP</li>
+        </ul>
       </div>
-      <label>Email: <a href="mailto: Matthew.Sudekum@outlook.com">Matthew.Sudekum@outlook.com</a></label>
-      
-    </div>
-    <div class="rectangle bottom-right-rect"></div>
-  </section>
-
-  <script src="scripts/scroll-detection.js"></script>
-  <script src="scripts/email.js"></script>
-  <script src="scripts/nav-styling.js"></script>
-  <script src="scripts/cards.js"></script>
+      <div>
+        <img src="images/headshot_500w.webp" alt="Matthew Sudekum Headshot" height="180px" width="180px" loading="lazy">
+        <a class="button" href="pages/contact.html">Contact Me</a>
+      </div>
+    </section>
+    <section id="experience">
+      <div>
+        <img src="images/responsive_code.svg" alt="Matthew Sudekum Headshot" height="180px" width="180px" loading="lazy">
+        <a class="button" href="pages/timeline.html" style="width: 115px;">View Timeline</a>
+      </div>
+      <div>
+        <h1>Notable Work</h1>
+        <ul>
+          <li><b>Expanded</b> a client's inventory/returns reporting capabilites inside the Bitrix24 platform,
+             beyond Bitrix24's included features</li>
+          <li><b>Reduced</b> the load time of a dynamically generated, image-heavy PDF from 30-40 seconds down to just 10 seconds</li>
+          <li><b>Deligated</b> and oversaw 30+ successful web development projects</li>
+          <li><b>Developed</b> and published a mobile game to the Google Play Store</li>
+          <li><b>Fixed</b> a large array of Critical Errors across many different WordPress sites</li>
+        </ul>
+      </div>
+    </section>
+    <section id="contact">
+      <div>
+        <h1>Interested In Working With Me?</h1>
+        <script type="text/javascript" src="https://form.jotform.com/jsform/231698653159065" loading="lazy"></script>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
 </body>
 </html>
+<script src="scripts/nav-fill.js"></script>
