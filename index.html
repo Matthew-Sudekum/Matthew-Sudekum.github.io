@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,19 @@
   <link rel="stylesheet" href="styles/style.css">
   <title>Home | Matthew Sudekum</title>
 </head>
+
 <body>
   <header>
     <nav>
-      <p id="name"><a href="">Matthew Sudekum</a></p>
-      <ul>
+      <div id="menu-underlay" class="menu"></div>
+      <p class="name"><a href="">Matthew Sudekum</a></p>
+      <div id="hamburger">
+        <input type="checkbox">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul id="menu" class="menu">
         <li><a href="pages\plugins.html">Plugins</a></li>
         <li><a href="pages\timeline.html">Timeline</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -21,8 +30,10 @@
   <main>
     <div id="hero">
       <div>
-        <h1>Digital Adventurer. Problem Solver.</h1>
-        <h2>Let's see what I have for You</h2>
+        <div id="hook">
+          <h1>Digital Adventurer. Problem Solver.</h1>
+          <h2>Let's see what I have for You</h2>
+        </div>
         <div class="chevron-parent"><a class="chevron" href="#plugins"></a></div>
       </div>
     </div>
@@ -36,8 +47,12 @@
         <ul>
           <li>Over 400+ Downloads!</li>
           <li>2 Plugins, Completely Free</li>
-          <li><a href="pages/plugins.html#Meta-Data-Importer"><span style="text-decoration: underline; color: rgb(21, 21, 21);">Meta Data Importer</span> - Makes Yoast SEO a Breeze</a></li>
-          <li><a href="pages/plugins.html#Clean-Meta-Descriptions"><span style="text-decoration: underline; color: rgb(21, 21, 21);">Clean Meta Descriptions</span> - Keeps Shortcodes Out of Search Results</a></li>
+          <li><a href="pages/plugins.html#Meta-Data-Importer"><span
+                style="text-decoration: underline; color: rgb(21, 21, 21);">Meta Data Importer</span> - Makes Yoast SEO
+              a Breeze</a></li>
+          <li><a href="pages/plugins.html#Clean-Meta-Descriptions"><span
+                style="text-decoration: underline; color: rgb(21, 21, 21);">Clean Meta Descriptions</span> - Keeps
+              Shortcodes Out of Search Results</a></li>
         </ul>
       </div>
     </section>
@@ -58,15 +73,17 @@
     </section>
     <section id="experience">
       <div>
-        <img src="images/responsive_code.svg" alt="Matthew Sudekum Headshot" height="180px" width="180px" loading="lazy">
+        <img src="images/responsive_code.svg" alt="Matthew Sudekum Headshot" height="180px" width="180px"
+          loading="lazy">
         <a class="button" href="pages/timeline.html" style="width: 115px;">View Timeline</a>
       </div>
       <div>
         <h1>Notable Work</h1>
         <ul>
           <li><b>Expanded</b> a client's inventory/returns reporting capabilites inside the Bitrix24 platform,
-             beyond Bitrix24's included features</li>
-          <li><b>Reduced</b> the load time of a dynamically generated, image-heavy PDF from 30-40 seconds down to just 10 seconds</li>
+            beyond Bitrix24's included features</li>
+          <li><b>Reduced</b> the load time of a dynamically generated, image-heavy PDF from 30-40 seconds down to just
+            10 seconds</li>
           <li><b>Deligated</b> and oversaw 30+ successful web development projects</li>
           <li><b>Developed</b> and published a mobile game to the Google Play Store</li>
           <li><b>Fixed</b> a large array of Critical Errors across many different WordPress sites</li>
@@ -82,5 +99,7 @@
   </main>
   <footer></footer>
 </body>
+
 </html>
 <script src="scripts/nav-fill.js"></script>
+<script src="scripts/mobile-menu.js"></script>

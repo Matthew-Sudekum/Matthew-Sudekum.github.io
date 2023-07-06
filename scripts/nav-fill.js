@@ -12,7 +12,7 @@ function getSectionBackgroundColor() {
   return null;
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const sectionBgColor = getSectionBackgroundColor();
   if (sectionBgColor) {
     nav.style.backgroundColor = sectionBgColor;
